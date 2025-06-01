@@ -18,7 +18,7 @@ const Hero = () => {
               >
                 <img 
                     
-                    src = "public/images/profile.jpg"
+                    src = "/images/profile.jpg"
                     alt="Aymen Melouah"
                     className="w-full h-full object-cover rounded-full shadow-lg"
 />
