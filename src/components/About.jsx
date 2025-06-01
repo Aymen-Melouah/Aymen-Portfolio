@@ -112,28 +112,30 @@ const About = () => {
               Skills & Expertise
             </h3>
             <div className="space-y-6">
-              {skillCategories.map((category, index) => (
-                <div key={index}>
-                  <h4 className="text-lg font-semibold mb-3" style={{ color: 'var(--text)' }}>
-                    {category.title}
-                  </h4>
-                  <div className="flex flex-wrap gap-2">
-                    {category.skills.map((skill) => (
-                      <span 
-                        key={skill} 
-                        className="px-3 py-1 rounded-full text-sm"
-                        style={{ 
-                          backgroundColor: `${category.color}20`,
-                          color: category.color
-                        }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
+  {skillCategories.map((category, index) => (
+    <div key={index}>
+      <h4 className="text-lg font-semibold mb-3" style={{ color: 'var(--text)' }}>
+        {category.title}
+      </h4>
+      <div className="flex flex-wrap gap-2">
+        {category.skills.map((skill) => (
+          <span 
+            key={skill} 
+            className="px-3 py-1 rounded-full text-sm border"
+            style={{ 
+              backgroundColor: `${category.color}20`, // light background
+              borderColor: category.color, // border around the tag
+              color: category.color // text color
+            }}
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
+    </div>
+  ))}
+</div>
+
           </div>
         </div>
       </div>

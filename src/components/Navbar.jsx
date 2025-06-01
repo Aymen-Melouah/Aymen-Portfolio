@@ -16,7 +16,7 @@ const Navbar = () => {
     >
       <div className="container">
         <div className="flex items-center justify-between h-16">
-          <div className="text-2xl font-bold" style={{ color: 'var(--text)' }}>
+          <div className="cursor-pointer text-2xl font-bold" style={{ color: 'var(--text)' }}>
             AYMEN MELOUAH
           </div>
           
@@ -59,28 +59,30 @@ const Navbar = () => {
       </div>
       
       {/* Mobile Navigation */}
-      {isOpen && (
-        <div 
-          className="md:hidden backdrop-blur-md"
-          style={{ backgroundColor: 'rgba(32, 32, 33, 0.95)' }}
-        >
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href={`#${link.toLowerCase()}`}
-                className="block px-3 py-2 text-base font-medium transition-colors duration-200"
-                style={{ color: 'var(--text)' }}
-                onMouseEnter={(e) => e.target.style.color = 'var(--primary)'}
-                onMouseLeave={(e) => e.target.style.color = 'var(--text)'}
-                onClick={() => setIsOpen(false)}
-              >
-                {link}
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
+      <div
+  className={`md:hidden transition-all duration-300 ease-in-out overflow-hidden ${
+    isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+  } backdrop-blur-md`}
+  style={{
+    backgroundColor: 'rgba(32, 32, 33, 0.95)',
+  }}
+>
+  <div className="px-2 pt-2 pb-3 space-y-1">
+    {navLinks.map((link) => (
+      <a
+        key={link}
+        href={`#${link.toLowerCase()}`}
+        className="block px-3 py-2 text-base font-medium transition-colors duration-200"
+        style={{ color: 'var(--text)' }}
+        onMouseEnter={(e) => (e.target.style.color = 'var(--primary)')}
+        onMouseLeave={(e) => (e.target.style.color = 'var(--text)')}
+        onClick={() => setIsOpen(false)}
+      >
+        {link}
+      </a>
+    ))}
+  </div>
+</div>
     </nav>
   );
 };
