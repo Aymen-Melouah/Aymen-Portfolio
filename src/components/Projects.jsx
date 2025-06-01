@@ -9,28 +9,28 @@ const Projects = () => {
       id: 1,
       title: "Culturia Logo",
       category: "Graphic Design",
-      image: "public/images/culturia.jpg",
+      image: "/images/culturia.jpg",
       description: "Theatre and cultural events platform logo design"
     },
     {
       id: 2,
       title: "Taissir Company Logo",
       category: "Graphic Design",
-      image: "public/images/taissir.jpg",
+      image: "/images/taissir.jpg",
       description: "Construction company logo design"
     },
     {
       id: 3,
       title: "TraceEats Logo",
       category: "Graphic Design",
-      image: "public/images/traceeats.png",
+      image: "/images/traceeats.png",
       description: "Hackathon project logo for food tracking app"
     },
     {
       id: 4,
       title: "I-Tech Social Media Campaign",
       category: "Social Media Design",
-      image: "public/images/warcha.jpeg",
+      image: "/images/warcha.jpeg",
       description: "Social media graphics for I-Tech Club events and promotions"
     },
  
@@ -38,7 +38,7 @@ const Projects = () => {
       id: 6,
       title: "PRISM",
       category: "Game Development",
-      image: "public/images/prism.png",
+      image: "/images/prism.png",
       description: "A 3D puzzle game developed by Vysio Softworks, featuring immersive environments and challenging gameplay"
     }
   ];
